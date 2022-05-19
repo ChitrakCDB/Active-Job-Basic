@@ -1,0 +1,16 @@
+<%if flash[:errors]%>
+  <%flash[:errors].each do |error|%>
+    <p class="text-center" style='color: red'><%= error%></p>
+  <%end%>
+<%end%>
+<div class=" p-5" >
+  <%= form_for @article do |f|%>
+    <%= f.label :title%>
+    <%= f.text_field :title, class:"col-12 "%>
+    <br>
+    <%= f.label :description%>
+    <%= f.text_field :description, class:"col-12 "%>
+    <br>
+    <%= f.submit class:"btn-success  mt-4  border-0 p-2 rounded-pill center" %> &nbsp;
+    <% end %>
+</div>
